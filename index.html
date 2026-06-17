@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda de Contactos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <span class="header-icon">📋</span>
+      <h1>Agenda <span class="accent">Multicapas</span></h1>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Formulario para agregar contacto -->
+    <section class="card form-section">
+      <h2 class="section-title">Nuevo Contacto</h2>
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej. Juan" />
+        </div>
+        <div class="input-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" placeholder="Ej. Pérez" />
+        </div>
+        <div class="input-group full-width">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" placeholder="Ej. 809-555-1234" />
+        </div>
+      </div>
+      <div class="form-actions">
+        <button id="btn-agregar" class="btn btn-primary">
+          <span class="btn-icon">+</span> Agregar Contacto
+        </button>
+      </div>
+      <p id="mensaje" class="mensaje"></p>
+    </section>
+
+    <!-- Lista de contactos -->
+    <section class="card list-section">
+      <div class="list-header">
+        <h2 class="section-title">Contactos</h2>
+        <span id="contact-count" class="badge">0</span>
+      </div>
+
+      <div id="search-bar-wrapper">
+        <input type="text" id="buscador" placeholder="🔍 Buscar contacto..." />
+      </div>
+
+      <div id="loading" class="state-msg">Cargando contactos...</div>
+      <div id="error-msg" class="state-msg error hidden"></div>
+      <div id="empty-msg" class="state-msg hidden">No se encontraron contactos.</div>
+
+      <ul id="lista-contactos"></ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Agenda Multicapas &mdash; Programación WEB · ITLA 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
